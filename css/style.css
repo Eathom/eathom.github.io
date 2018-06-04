@@ -1,0 +1,29 @@
+nav {
+    background-color: #090e08;
+}
+
+nav > ul> li> a:link {
+    color: #DAC2A1;
+}
+
+nav > ul> li> a:hover {
+    color: #DAC2A1;
+ 
+}
+
+nav > ul> li> a:visited {
+    color: #ad9268;
+}
+
+.navbar-brand:link  {
+    color: #DAC2A1;
+}
+
+.navbar-brand:hover {
+    color: #DAC2A1;
+}
+
+.navbar-brand:visited {
+    color: #DAC2A1;
+}
+
