@@ -4,65 +4,88 @@
 <head>
     <title>Ritual Dev</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <div class="bg">
-    <nav class="container-fluid">
-        <div class="navbar-header" style="background-color: black">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">RitualDev</a>
-        </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <ul class="nav navbar-nav">
-            <li class="active">
-                <a href="#">Home</a>
-            </li>
-            <li>
-                <a href="#">Resume</a>
-            </li>
-            <li>
-                <a href="#">Projects</a>
-            </li>
-            <li>
-                <a href="#">About</a>
-            </li>
-        </ul>
-    </nav>
-    <div class="container-fluid">
-    <div class="jumbotron" >
-         <div class="row">
-            <div class="col-sm-4" id="profile">
-                <p>
-                 <img src="profile.JPG" id="profile" class="img-circle" /> 
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+
+
+
+        <div class="container-fluid">
+            <div class="jumbotron">
+                <div class="row">
+                    <div class="  col-sm-4 " id="profile">
+                        <p>
+                            <img src="profile.JPG" id="profile" class="img-circle" />
+                    </div>
+                    <div class="offset-col-sm-4 col-sm-4">
+                        <p class="text-center align-middle">
+                            Hi, I'm Lizz.
+                        </p>
+
+
+                    </div>
+
+
+                </div>
             </div>
 
-
-            <div class="offset-sm-2 col-sm-6">
-                <h2>Lizz Thompson</h2>
+            <div>
+                <div class="footer" style="background-color: #EECF83">
+                    <p> elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis </p>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <p>orem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-                sociis natoque ede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet
-                a, venenatis vit ae, justo. Nullam dictum felis e etur ridiculus mus. Donec quame eget, arcu. In enim justo,
-                rhoncus ut, imperdiet a, venenatis vit ae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
-                Cras dapibus. Vivamus elementum semper nis i. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor
-            </p>
-        </div>
-    </div>
-</div>
-
-    <div>
-        <div class="footer" style="background-color: #EECF83">
-            <p> elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis </p>
-        </div>
-    </div>
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
+
+<!-- Navbar
+The navbar has been entirely rewritten in flexbox with improved support for alignment, responsiveness, and customization.
+
+Responsive navbar behaviors are now applied to the .navbar class via the required .navbar-expand-{breakpoint} where you choose where to collapse the navbar. Previously this was a Less variable modification and required recompiling.
+.navbar-default is now .navbar-light, though .navbar-dark remains the same. One of these is required on each navbar. However, these classes no longer set background-colors; instead they essentially only affect color.
+Navbars now require a background declaration of some kind. Choose from our background utilities (.bg-*) or set your own with the light/inverse classes above for mad customization.
+Given flexbox styles, navbars can now use flexbox utilities for easy alignment options.
+.navbar-toggle is now .navbar-toggler and has different styles and inner markup (no more three <span>s).
+Dropped the .navbar-form class entirely. It’s no longer necessary; instead, just use .form-inline and apply margin utilities as necessary.
+Navbars no longer include margin-bottom or border-radius by default. Use utilities as necessary.
+All examples featuring navbars have been updated to include new markup.
+-->
