@@ -22,10 +22,8 @@ h2 {
          
 }
 
-#profile {
-     min-width: 25%%;
-     height: auto;
-    
+[id=profile] {
+     height: 125px;
 }
 
 
@@ -58,16 +56,16 @@ nav > ul> li> a:visited {
     color: #e2e4e0;
 }
 
-#bottom-text {
+[id=bottom-text] {
     background-color: rgba(211, 149, 167, 0.432);
-    padding-top: 25px;
-    padding-bottom:50px;
-    margin:auto;
+    padding-bottom: 25px;
+    margin-top: 50px;
+    margin-bottom: 525x;
     text-align: center;
     box-shadow: 5px 10px rgba(212, 202, 205, 0.507);
 }
 
-#footer {
+[id=footer] {
     background-color: #EECF83;
  
 }
