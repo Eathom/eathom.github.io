@@ -4,7 +4,9 @@
     background-image: url(../img/tulip.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: rgba(211, 149, 167, 0.432);
 }
+
 
 h2 {
     font-size: 4vw;
@@ -21,7 +23,7 @@ h2 {
 }
 
 #profile {
-     max-width: 100%;
+     min-width: 25%%;
      height: auto;
     
 }
@@ -56,3 +58,16 @@ nav > ul> li> a:visited {
     color: #e2e4e0;
 }
 
+#bottom-text {
+    background-color: rgba(211, 149, 167, 0.432);
+    padding-top: 25px;
+    padding-bottom:50px;
+    margin:auto;
+    text-align: center;
+    box-shadow: 5px 10px rgba(212, 202, 205, 0.507);
+}
+
+#footer {
+    background-color: #EECF83;
+ 
+}
