@@ -21,7 +21,8 @@ h2 {
 }
 
 #profile {
-     height: 150px;
+     max-width: 100%;
+     height: auto;
     
 }
 
