@@ -8,6 +8,16 @@
 }
 
 
+[id=particles-js] {
+   
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        
+      }
+
+
+
 h2 {
     font-size: 4vw;
 }
@@ -19,6 +29,7 @@ h2 {
     background-color: #dcd1bf; 
     background-image: url(../img/texture.jpg); 
     color: #2F2D23;
+ 
          
 }
 
@@ -29,6 +40,8 @@ h2 {
 
 nav {
     background-color: #090e08;
+
+   
 }
 
 nav > ul> li> a:link {
