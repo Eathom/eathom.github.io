@@ -6,23 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
         crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body >
 
-
+    <!-- space before navigation bar-->
     <div class="header">
-        <br/>
+        <br />
     </div>
 
-    <div class="my-nav-bar">
+    <!-- navbar in Bootstrap container, not 100% width-->
+    <div class="my-nav-bar container">
+        <!-- overwriting navbar brand class-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">RitualDev</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -40,113 +43,126 @@
                         <a class="nav-link" href="/pages/projects.html">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="/pages/about.html">About</a>
                     </li>
                 </ul>
 
             </div>
         </nav>
-    </div>
-
-    <div id="particles-js">
-    </div>
-
-    
-
-    <div class="jumbotron">
-
-        <div id="particles-js">
-            <canvas class="particles-js-canvas-el" width="1409" height="5" style="width: 100%; height: 100%;"></canvas>
-        </div>
+    </div> <!-- end of navigation-->
 
 
-
-        <div class="row">
-            <div class="offset-sm-1 col-sm-3" id="profile">
-                <p>
-                    <img src="profile.JPG" id="profile" class="rounded-circle float-left img-fluid" alt="headshot" />
-            </div>
-            <div class="col-sm-4">
-                <h3 class="text-left align-middle">
-                    Hi, I'm Lizz.
-                </h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-8">
-                <br/>
-                <p>
-                    I am commited to fullstack development with a foundation built from The Software Guild.
-                </p>
-                <p>
-                    Languages: Java, HTML, CSS, Javascript, Jquery, JSON, SQL
-                </p>
-                <p>
-                    Skills learned: Object Oriented Programming, CRUD Applications, MVC Architecture, RESTFUL web services, Agile Development,
-                    N-Tier Design, Test-Driven Development
-                </p>
-                <p>Frameworks: JQuery, Spring MVC, Ajax, Maven, Bootstrap, GitHub, Slack, Junit, BitBucket, Jasper</p>
-                <p>
-                    Tools used: NetBeans, Maven, Visual Studio Code, MySQL, GitBash, JIRA, Crucible, Chrome Developer Tools
-                </p>
-            </div>
-        </div>
-        <div class="container offset-sm-2 col-sm-8 rounded" id="bottom-text">
-
-            <br/>
-            <p>
-                This site is hosted via GitHub Pages and is written using the Bootstrap framework for front end development.
-            </p>
-            <p>
-                Currently, this is a static site with plans to move to a cloud host for a dynamic page.
-            </p>
-
-        </div>
-    </div>
-    <div id="spacing"></div>
-    
-        <div id="footer" class="footer">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
             <div class="row">
-                <div class=" offset-sm-2  col-sm-3 ">
-                    <h5>Elizabeth Thompson</h5>
-                    <p>EathomRD@gmail.com</p>
+                <div class="offset-sm-1 col-sm-3" id="profile">
+                    <p>
+                        <img src="profile.JPG" class="rounded-circle float-left img-fluid" alt="Jr Web Developer headshot" />
                 </div>
-                <div class="col-sm-3">
-                    <p style="font-size: 2em">
-                        <a href="https://www.facebook.com/haloeyez" target="_blank">
-                            <i class="fab fa-facebook-square" style=" color:#F68BAE"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/lizz-thompson-7a7705b2/" target="_blank">
-                            <i class="fab fa-linkedin-in" style=" color:#F68BAE"></i>
-                        </a>
-                        <a href="https://github.com/Eathom/GuildPortfolio" target="_blank">
-                            <i class="fab fa-github" style="color: #F68BAE"></i>
-                        </a>
+                <div class="col-sm-4">
+                    <h1 class="text-center vertical-center display-4 script-font" id="name">
+                        Lizz Thompson 
+                    </h1>
+                    <h1 class="text-center vertical-center" id="intro">
+                    - Jr. Web Developer
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div> <!-- END of jumbotron-->
+
+    <!-- Main section-->
+    <div class="container-fluid main-section">
+        <div class="container">
+            <div class="row">
+                <div class="offset-sm-1 col-sm-10 text-center">
+                    <br />
+                    <h3>
+                        Hi, I'm Lizz a recent graduate of Software Guild's web development certificate located in Saint Paul, MN.
+                    </h3>
+                    <br />
+                    <p>
+                        I am commited to fullstack development with a foundation built from The Software Guild.
+                    </p>
+                    <p>
+                        <strong> Languages:</strong> Java, HTML, CSS, Javascript, Jquery, JSON, SQL
+                    </p>
+                    <p>
+                        <strong>Skills learned:</strong> Object Oriented Programming, CRUD Applications, MVC
+                        Architecture, RESTFUL web
+                        services,
+                        Agile Development,
+                        N-Tier Design, Test-Driven Development
+                    </p>
+                    <p><strong>Frameworks:</strong> JQuery, Spring MVC, Ajax, Maven, Bootstrap, GitHub, Slack, Junit,
+                        BitBucket, Jasper</p>
+                    <p>
+                        <strong>Tools used:</strong> NetBeans, Maven, Visual Studio Code, MySQL, GitBash, JIRA,
+                        Crucible, Chrome Developer
+                        Tools
+                    </p>
+                </div>
+            </div>
+
+            <!-- bubble text-->
+            <div class="row">
+                <div class="container offset-sm-2 col-sm-8 rounded" id="text-bubble">
+                    <br />
+                    <p>
+                        This site is hosted via GitHub Pages and is written using the Bootstrap framework for front end
+                        development.
+                    </p>
+                    <p>
+                        Currently, this is a static site with plans to move to a cloud host for a dynamic page.
                     </p>
 
                 </div>
-                <div class="col-sm-3">
+            </div> <!-- end of bubble text-->
+        </div>
+    </div><!-- end of main section-->
 
-                </div>
 
+    <div id="bottom-space" class="container-fluid">
+        <!-- keeps footer from overlapping bubble text-->
+    </div>
+
+    <div id="footer" class="footer">
+        <div class="row">
+            <div class=" offset-sm-2  col-sm-2 ">
+                <h5 id="footer-name">Lizz Thompson</h5>
+                <p id="footer-email">EathomRD@gmail.com</p>
+            </div>
+            <div class="offset-sm-1 col-sm-3" id="footer-social-media">
+                <p style="font-size: 2em">
+                    <a href="https://www.facebook.com/haloeyez" target="_blank">
+                        <i class="fab fa-facebook-square" style=" color:#F68BAE"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/lizz-thompson-7a7705b2/" target="_blank">
+                        <i class="fab fa-linkedin-in" style=" color:#F68BAE"></i>
+                    </a>
+                    <a href="https://github.com/Eathom/GuildPortfolio" target="_blank">
+                        <i class="fab fa-github" style="color: #F68BAE"></i>
+                    </a>
+                </p>
             </div>
         </div>
+    </div><!-- end of footer-->
 
-        
-<script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyAq3f8M4qdIdMvpJ95eO0vj_7R4iKOFDh0",
-    authDomain: "project-1-5891a.firebaseapp.com",
-    databaseURL: "https://project-1-5891a.firebaseio.com",
-    projectId: "project-1-5891a",
-    storageBucket: "project-1-5891a.appspot.com",
-    messagingSenderId: "116548616515"
-  };
-  firebase.initializeApp(config);
-</script>
-   
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAq3f8M4qdIdMvpJ95eO0vj_7R4iKOFDh0",
+            authDomain: "project-1-5891a.firebaseapp.com",
+            databaseURL: "https://project-1-5891a.firebaseio.com",
+            projectId: "project-1-5891a",
+            storageBucket: "project-1-5891a.appspot.com",
+            messagingSenderId: "116548616515"
+        };
+        firebase.initializeApp(config);
+    </script>
+
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -155,11 +171,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
-    <script src="js/particles.js">
-    </script>
-    <script type="text/javascript">
-        particlesJS();
-    </script>
 
 </body>
 

@@ -1,0 +1,103 @@
+I set up Heroku with my GitHub account to add dynamic capacity and web apps.
+
+The Software Guild provideded a Maven archtype to work with Heroku using Tomcat's webapp runner which I cloned via a command line shell
+
+1.) Navigate to local folder
+cd c:\folder/directory
+
+2.) Clone archetype catalog xml
+$ git clone username@host:/path/to/archtype
+
+3.) Navigate into that repo folder
+cd \newFolder
+
+4.) Copy the archetype catalog into the .m2 directory
+$ cp archetype-catalog.xml ~/.m2
+
+Use NetBeans IDE to open the new project and did a clean and build.
+Then navigate to Tools> Options> Java> Maven Tab> Index and click "Index Now". 
+
+Double check the new archtype installed by starting a new Maven from archetype project.
+
+I created a new project with the archetype.
+
+The difference in this archetype for Heroku happens with 2 files in the application root: pom.xml and Procfile
+
+pom.xml
+
+Add the Webapp Runner plugin to the build configuration.
+<build>
+    ...
+    <plugins>
+        ...
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-dependency-plugin</artifactId>
+            <executions>
+                <execution>
+                    <phase>package</phase>
+                    <goals><goal>copy</goal></goals>
+                    <configuration>
+                        <artifactItems>
+                            <artifactItem>
+                                <groupId>com.github.jsimone</groupId>
+                                <artifactId>webapp-runner</artifactId>
+                                <version>9.0.11.0</version>
+                                <destFileName>webapp-runner.jar</destFileName>
+                            </artifactItem>
+                        </artifactItems>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+</build>
+
+At this point you can locally run your app on port 8080 by entering
+$ java -jar target/dependency/webapp-runner.jar target/*.war
+
+Procfile 
+
+ Heroku's requirement for deploying your app online.
+Create a new blank file (with no extension) and add 1 line:
+web: java $JAVA_OPTS -jar target/dependency/webapp-runner.jar --port $PORT target/*.war
+
+Navigate to your app root with the command line and enter
+$ mvn package
+
+This will compile and package your code.
+
+Create your new git repository, add, and commit.
+$ git init
+$ git add .
+$ git commit -m "ready to deploy"
+
+You will then create a remote repository called heroku and title your app.
+$ heroku create my-app-name
+
+To double check this remote was created:
+$ git remote -v
+
+If no heroku remote exists(mine had trouble being created), an alternative way to create it is
+$ heroku git:remote -a my-app-name
+
+Once your heroku remote repo is created you can now push your local repo
+$ git push heroku master
+
+By default, no dynos will be allotted. To check dynos used for the month, and if any have been allotted to your app
+$ heroku ps
+
+To allot 1 dyno to take web requests 
+$ heroku ps:scale web=1
+
+On the free tier of Heroku, dyno's go to sleep after 1/2 hour and can take about a min 1/2 to wake up at another request.
+
+To open the app
+$ heroku open
+
+I had ran into problems and needed to start over. To remove the Heroku remote repo.
+
+$ git remote rm heroku
+
+This was a good exercise to get further experience using the git command line, reading through Heroku's documentation regarding Profile requirement and dynos, and understanding archetypes/pom files.
+

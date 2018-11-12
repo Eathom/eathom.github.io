@@ -11,16 +11,16 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body>
+<body style="background-color: white">
 
-    <div class="header">
-        <br/>
-    </div>
+        <div class="header" style="background-color: #ffc9b8">
+            <br />
+        </div>
     <div class="sticky-top">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="../index.html">RitualDev</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -31,14 +31,14 @@
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Resume</a>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/pages/resume.html">Resume</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="#">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="/pages/about.html">About</a>
                     </li>
                 </ul>
 
@@ -49,10 +49,46 @@
 
     <div class="container-fluid">
         <div class="jumbotron">
-        
-               <ul>
-                   <li<img dynsrc="https://www.computerhope.com/issues/floppy2.avi" start="fileopen"/>FitBit Ionic Neon Clock</a></li>
-                </ul>
+            <h2>Projects, Completed Work, and Current Work</h2>
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <br />
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-dark">FitBit Ionic Neon Clock </li>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><img src="../img/watch.jpg" width="95%%" /></li>
+                            <li class="list-group-item"> <iframe width="95%" height="300" src="https://www.youtube.com/embed/x6VpgqCehNc"
+                                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe></li>
+                        </ul>
+                    </ul>
+                </div>
+
+                <div class="col-sm-4">
+                    <br />
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-dark"><a href="www.pearlstreettea.com">Pearl
+                                Street Tea Co. </a>(in
+                            progress)</li>
+                            <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><img src="../img/pstScreenshot.jpg" width="95%" height="311px"  /></li>
+                                   
+                                </ul>
+                    </ul>
+                </div>
+
+            </div>
+
+
+            <div class="row">
+
+
+                <div class="col-sm-6">
+
+                </div>
+            </div>
 
 
         </div>
@@ -66,13 +102,15 @@
 
 
     <div>
-        <div id="footer" class="footer sticky-bottom">
+
+
+        <div id="footer" class="footer">
             <div class="row">
-                <div class=" offset-sm-2  col-sm-3 ">
-                    <h5>Elizabeth Thompson</h5>
-                    <p>EathomRD@gmail.com</p>
+                <div class=" offset-sm-2  col-sm-2 ">
+                    <h5 id="footer-name">Lizz Thompson</h5>
+                    <p id="footer-email">EathomRD@gmail.com</p>
                 </div>
-                <div class="col-sm-3">
+                <div class="offset-sm-1 col-sm-3" id="footer-social-media">
                     <p style="font-size: 2em">
                         <a href="https://www.facebook.com/haloeyez" target="_blank">
                             <i class="fab fa-facebook-square" style=" color:#F68BAE"></i>
@@ -84,14 +122,9 @@
                             <i class="fab fa-github" style="color: #F68BAE"></i>
                         </a>
                     </p>
-
                 </div>
-                <div class="col-sm-3">
-
-                </div>
-
             </div>
-        </div>
+        </div><!-- end of footer-->
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
