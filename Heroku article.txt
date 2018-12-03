@@ -1,4 +1,4 @@
-I set up Heroku with my GitHub account to add dynamic capacity and web apps.
+giI set up Heroku with my GitHub account to add dynamic capacity and web apps.
 
 The Software Guild provideded a Maven archtype to work with Heroku using Tomcat's webapp runner which I cloned via a command line shell
 
@@ -29,7 +29,7 @@ Add the Webapp Runner plugin to the build configuration.
 <build>
     ...
     <plugins>
-        ...
+        ...   
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-dependency-plugin</artifactId>
@@ -45,7 +45,7 @@ Add the Webapp Runner plugin to the build configuration.
                                 <version>9.0.11.0</version>
                                 <destFileName>webapp-runner.jar</destFileName>
                             </artifactItem>
-                        </artifactItems>
+                        </artifactItems> 
                     </configuration>
                 </execution>
             </executions>
@@ -85,7 +85,7 @@ Once your heroku remote repo is created you can now push your local repo
 $ git push heroku master
 
 By default, no dynos will be allotted. To check dynos used for the month, and if any have been allotted to your app
-$ heroku ps
+$ heroku ps 
 
 To allot 1 dyno to take web requests 
 $ heroku ps:scale web=1
@@ -101,3 +101,74 @@ $ git remote rm heroku
 
 This was a good exercise to get further experience using the git command line, reading through Heroku's documentation regarding Profile requirement and dynos, and understanding archetypes/pom files.
 
+
+heroku pg:info - check the pg version, then install that version onto windows
+add to path  C:\Program Files\PostgreSQL\10\bin  10.6 is the current version but 10 is what to input becase of folder name
+
+heroku pg:psql 
+In heroku.com go to datastores - database credentials and find theheroku CLI  to add after psql
+
+
+
+44
+down vote
+accepted
+1) Go to (Open) Command Prompt (Press Window + R then type cmd Run this).
+
+2) Run following commands
+
+For all listening ports
+
+netstat -aon | find /i "listening"
+Apply port filter
+
+netstat -aon |find /i "listening" |find "8080"
+Finally with the PID we can run the following command to kill the process 
+
+3) Copy PID from result set
+
+taskkill /F /PID
+Ex: taskkill /F /PID 189
+
+PGUSER=postgres PGPASSWORD=pw heroku pg:pull postgresql-lively-71454 mylocaldb --app p-1127
+
+PGUSER=postgres PGPASSWORD=pw heroku pg:push mylocaldb postgresql-lively-71454 --app p-1127
+
+t-1127
+PGUSER=postgres PGPASSWORD=pw heroku pg:push mylocaldb postgresql-pointy-85470 --app t-1127
+postgresql-pointy-85470
+
+cd \c:/repos/GitHub/Heroku/test1
+
+
+
+
+
+DATABASE_URL: postgres://ec2-54-225-196-122.compute-1.amazonaws.com:5432/d9metigsfmkpni
+xdqtdmpnmhbjnc
+c4dc333ec605c1adf061c631f66a9056b9af3c6480148c9506b7d8b39171b46f
+
+psql --version
+psql -U postgres to sign in
+
+windows :
+Windows:
+
+set DATABASE_URL=postgres://$(whoami)
+After set up Postgres, you can use psql client to access the database. As you asked in comment regarding how to run .sql file, here's the steps:
+
+In command prompt, type "psql". You are now connected to your database.
+
+Inside psql, type "\i your_sql_file.sql". This execute the your_sql_file.sql file.
+
+
+$ PGPASSWORD=pass psql -U user -h host.com -p 5432 -d database-name 
+
+9
+down vote
+change "trust" instead of "md5" in the pg_hba.conf to connect to the database and change your password.
+
+    --------------------configuration in pg_hba.conf---------------
+    local   all         all                               trust  
+    local   all         postgres                          trust          
+    host    all         all         ::1/128               trust
