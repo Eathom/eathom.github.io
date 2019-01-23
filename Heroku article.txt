@@ -138,7 +138,7 @@ t-1127
 PGUSER=postgres PGPASSWORD=pw heroku pg:push mylocaldb postgresql-pointy-85470 --app t-1127
 postgresql-pointy-85470
 
-cd \c:/repos/GitHub/Heroku/test1
+cd \c:/repos/GitHub/Heroku/mavenproject1
 
 
 
@@ -172,3 +172,10 @@ change "trust" instead of "md5" in the pg_hba.conf to connect to the database an
     local   all         all                               trust  
     local   all         postgres                          trust          
     host    all         all         ::1/128               trust
+
+
+
+
+JAWSDB_URL: mysql://o3iyl77734b9n3tg.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/rgqwk9gdlzdj2juh
+vq02x4p9h0ioje53
+o9zpb82yzcuhwgo8
